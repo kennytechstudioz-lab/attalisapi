@@ -2,8 +2,8 @@
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-echo "Deploying Delta API..."
+echo "Deploying Attalis API..."
 npm install
 npm run build
-pm2 restart delta-api || pm2 start dist/index.js --name "delta-api"
-echo "Delta API deployed successfully!"
+pm2 restart attalis-api || pm2 start dist/index.js --name "attalis-api"
+echo "Attalis API deployed successfully!"
